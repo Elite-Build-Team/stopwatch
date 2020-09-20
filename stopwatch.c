@@ -1,17 +1,17 @@
 // Variables
-int counter = 0;
-int count = 0;
-int temp=0;
-int pressed=1;
-int butt_pr=0;
-int interrupt=0;
-int secs=0;
-int startPressed = 0;    // the moment the button was pressed
-int endPressed = 0;      // the moment the button was released
-int holdTime = 0;        // how long the button was hold
-int idleTime = 0;
+unsigned int counter = 0;
+unsigned int count = 0;
+unsigned int temp=0;
+unsigned int pressed=1;
+unsigned int butt_pr=0;
+unsigned int interrupt=0;
+unsigned int secs=0;
+unsigned int startPressed = 0;    // the moment the button was pressed
+unsigned int endPressed = 0;      // the moment the button was released
+unsigned long holdTime = 0;        // how long the button was hold
+unsigned long idleTime = 0;
 unsigned long previousMillis = 0;
-extern unsigned long currentMillis=0;
+unsigned long currentMillis=0;
 bool reset_flag=false;
 
 extern unsigned long time_elapsed=0;
@@ -40,17 +40,7 @@ void whentoreset() {
 
   }
 }  	
-/*
-void check_butt_pres(){
-  if (pressed){
-	if (time_elapsed >=1000){
-      reset();
-    }else{
-     	reset_flag=false;
-    }
-  }
-}
-*/
+
 void reset(){
   currentMillis=0;
   previousMillis=0;
